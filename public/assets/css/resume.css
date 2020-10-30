@@ -1,0 +1,173 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0
+}
+html{
+    font-size: 62.5%;
+
+}
+:root{
+    --font-main:'Raleway', sans-serif;
+
+}
+body{
+    font-family: var(--font-main);
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    
+}
+p{
+    font-size: 14px;
+}
+h1{
+    font-size: 30px;
+}
+h2{
+    font-size: 16px;
+}
+.container{
+    display: grid;
+    width: 100%;
+   
+    grid-template-columns: minmax(5rem,1fr) 90rem minmax(5rem,1fr);
+    grid-template-rows: 10rem minmax(800px,min-content) 5rem;
+    grid-template-areas: ". head ."
+                        ". main ."
+                        ". . ."
+}
+.main{
+    grid-area: main;
+    -webkit-box-shadow: -1px 0px 37px 0px rgba(179,179,179,1);
+    -moz-box-shadow: -1px 0px 37px 0px rgba(179,179,179,1);
+    box-shadow: -1px 0px 37px 0px rgba(179,179,179,1);
+    display: grid;
+    grid-template-rows: 30rem 70fr;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-template-areas: "upper "
+                        "lower";
+}
+.upper{
+    grid-area: upper;
+ background: rgb(236, 236, 236);
+display: flex;
+background: linear-gradient(rgba(24, 1, 1, 0.5),rgba(0, 0, 0, 0.5)),  url('../img/resume-cover-2.jpg');
+background-size: 100% 200% , cover;
+}
+.slant-1{
+  
+   
+    width:60%;
+    background: rgba(168, 32, 32, 0.479);
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+
+}
+.slant-1 h1{
+color: white;
+margin-left: 1rem;
+}
+.image-box{
+    width: 12rem;
+    height: 13rem;
+    background: url("../img/Cv-Image.jpg");
+    border-radius: 50%;
+    border:2px solid white;
+    margin-left: 5rem;
+    
+
+}
+
+.lower{
+
+    grid-area: lower;
+  
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    grid-template-areas: "left right"
+
+}
+.same{
+    display: grid;
+    grid-template-rows: repeat(auto-fit,minmax(15rem,min-content))
+}
+.left{
+    grid-area: left;
+}
+.right{
+    grid-area: right
+}
+.block{
+    margin: 3rem;
+    display: grid;
+    grid-template-rows: 4rem minmax(11rem,min-content);
+    grid-template-areas: "title" "detail";
+}
+.title{
+    grid-area: title;
+    background: rgb(226, 48, 48);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white
+}
+.detail{
+    grid-area: detail;
+}
+
+#contact > *{
+margin:5px 3rem;
+font-weight: bold
+}
+
+#skills > *{
+margin: 5px 3rem;
+}
+#skills p:nth-child(1){
+    margin-top: 50px;
+}
+.personal-info , .edu{
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    grid-template-rows: repeat(auto-fit,min-content);
+
+}
+.personal-info > *, .edu > *{
+    margin: 15px 3rem;
+}
+.personal-info p:nth-child(odd), .edu p:nth-child(odd){
+    font-weight: bold
+}
+.project > *{
+margin: 5px 3rem;
+}
+.project h2:nth-child(1){
+    margin-top: 3rem
+}
+.dur{
+    color: rgb(255, 136, 0);
+    font-weight: bold
+}
+
+
+
+
+
+.d-flex{
+    display: flex;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.align-item-center{
+    align-items: center;
+}
+.flex-flow-column{
+    flex-flow: column
+}
+.head{
+    grid-area: head;
+    
+}
